@@ -1,0 +1,35 @@
+## Make your own application w/ github:
+## Register at https://github.com/settings/developers
+## Can use any URL for the homepage URL (ie http://github.com) 
+## Use http://localhost:1410 as the callback url
+
+library(jsonlite)
+library(httpuv)
+library(httr)
+library(RJSONIO)
+
+oauth_endpoints("github")
+
+#replace key and secret w/ own info
+practiceapp <- oauth_app("github",
+                         key = "6ac8cc539ed69fa88e6f",
+                         secret = "804e4aa2edee14709911546b4bffde6c7d656a19")
+github_token <- oauth2.0_token(oauth_endpoints("github"), practiceapp)
+gtoken <- config(token = github_token)
+
+#requesting data from jtleek github repo and determining data type
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+print(req) 
+stop_for_status(req)
+
+#converting JSON data into readable data frame
+data <- fromJSON(rawToChar(req$content))
+data <- lapply(data, function(x) {
+    x[sapply(x, is.null)] <- NA
+    unlist(x)
+})
+df<-as.data.frame(do.call("rbind", data))
+
+#indexing new data frame
+dat <- df$html_url == "https://github.com/jtleek/datasharing"
+df[dat, "created_at"]
