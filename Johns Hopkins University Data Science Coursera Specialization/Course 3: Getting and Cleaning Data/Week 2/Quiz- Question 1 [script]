@@ -12,8 +12,8 @@ oauth_endpoints("github")
 
 #replace key and secret w/ own info
 practiceapp <- oauth_app("github",
-                         key = "6ac8cc539ed69fa88e6f",
-                         secret = "804e4aa2edee14709911546b4bffde6c7d656a19")
+                         key = "XXXXXX",
+                         secret = "XXXXXX")
 github_token <- oauth2.0_token(oauth_endpoints("github"), practiceapp)
 gtoken <- config(token = github_token)
 
@@ -30,6 +30,6 @@ data <- lapply(data, function(x) {
 })
 df<-as.data.frame(do.call("rbind", data))
 
-#indexing new data frame
+#subsetting new data frame
 dat <- df$html_url == "https://github.com/jtleek/datasharing"
 df[dat, "created_at"]
