@@ -1,0 +1,60 @@
+# QUIZ QUESTIONS 2-5 SETUP
+
+install.packages("sqldf")
+
+library(sqldf)
+
+#make sure RMySQL package is unloaded (sqldf overcomes its commands)
+detach("package:RMySQL", unload = TRUE)
+
+#################################
+#################################
+
+# QUESTION 2
+
+#importing csv data
+acs <- read.csv.sql("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv")
+head(acs)
+
+#making new data frame with only data for the probability weights pwgtp1 with ages less than 50
+df <- sqldf("select pwgtp1 from acs where AGEP < 50")
+head(df)
+
+#################################
+#################################
+
+# QUESTION 3
+
+#builds off question 2, no code necessary
+#keep in mind that 'distinct' in sqldf is equivalent to r's 'unique' function 
+
+#################################
+#################################
+
+#QUESTION 4
+
+file <- url("http://biostat.jhsph.edu/~jleek/contact.html")
+rawHTML <- readLines(file)
+close(file)
+rawHTML
+nchar(rawHTML)[c(10,20,30, 100)]
+
+#################################
+#################################
+
+#QUESTION 5
+
+# Note that .for files are fixed width format. Open the provided file with
+# a text editor first to determine col widths in order to read properly.
+# Also note the header covering the first 3 rows 
+
+data <- read.fwf(
+    file=url("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"),
+    skip=4,
+    widths=c(12, 7, 4, 9, 4, 9, 4, 9, 4))
+
+# check that file was formatted correctly
+head(data)
+
+# sum all values in the 4th col
+print(sum(data[,4]))
