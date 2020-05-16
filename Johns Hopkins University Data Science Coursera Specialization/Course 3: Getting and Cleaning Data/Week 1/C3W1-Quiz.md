@@ -1,7 +1,7 @@
-Getting and Cleaning Data Quiz
+Getting and Cleaning Data Quiz 1
 ================
 
-###### Johns Hopkins Data Science Specialization : Course 3 : Week 1 : Quiz 1
+###### Johns Hopkins Data Science Specialization : Course 3 : Week 1 : Quiz
 
 ### Question 1
 
