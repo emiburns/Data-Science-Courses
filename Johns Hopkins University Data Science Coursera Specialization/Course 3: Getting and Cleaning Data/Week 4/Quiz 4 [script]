@@ -1,0 +1,68 @@
+#QUIZ 4 SETUP
+
+install.packages("quantmod")
+
+###################################
+###################################
+
+#QUESTION 1
+
+#loading data (csv)
+url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
+csv <- download.file(url, "idahohousing.csv", method = "curl")
+housing <- read.csv("idahohousing.csv") 
+head(housing)
+names(housing)
+
+#splitting var names and pulling 123rd element of the list
+strsplit(names(housing), "wgtp")[[123]]
+
+###################################
+###################################
+
+#QUESTIONS 2 & 3
+
+#loading/cleaning gdp dataset (csv)
+gdp_url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv"
+gdp_csv <- download.file(gdp_url, "gdpdata.csv", method = "curl")
+gdp <- read.csv("gdpdata.csv", skip =4, stringsAsFactors = FALSE)
+gdp <- gdp[1:190, -c(3, 6:10)]
+colnames(gdp) <- c("ID", "Rank", "countryNames", "GDP")
+
+#removing commas from GDP numbers & taking the mean
+gdp$GDP <- as.numeric(gsub(",","",gdp$GDP))
+mean(gdp$GDP, na.rm = T)
+
+#regular expression that counts the number of countries that begin with "United"
+length(grep("^United", gdp$countryNames))
+
+###################################
+###################################
+
+#QUESTIONS 4
+
+#loading edu dataset & merging w/ gdp dataset
+edu_url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv"
+edu_csv <- download.file(edu_url, "edudata.csv", method = "curl")
+edu <- read.csv("edudata.csv", stringsAsFactors = FALSE)
+colnames(edu)[colnames(edu) == "CountryCode"] <- "ID"
+df <- merge(gdp, edu)
+
+# how many countries end fiscal year in June
+length(grep("^Fiscal year end: June", df$Special.Notes))
+
+###################################
+###################################
+
+#QUESTIONS 5
+
+library(quantmod)
+amzn = getSymbols("AMZN",auto.assign=FALSE)
+sampleTimes = index(amzn)
+head(sampleTimes)
+
+#values collected in 2012
+sum(format(sampleTimes, "%Y")==2012)
+
+#Values collected on Mondays in 2012
+sum(format(sampleTimes, "%Y")==2012 & weekdays(sampleTimes)=="Monday")
