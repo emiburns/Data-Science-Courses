@@ -3,7 +3,6 @@ Getting and Cleaning Data Course Project
 
 ###### Johns Hopkins Data Science Specialization : Course 3 : Course Project
 
-![](https://lh4.googleusercontent.com/proxy/uShWh5V5_c4tN6239GW1yy_tTD2cmF9R8cc3YyosbsWXLfD-W0bjlxyqdZDvETGH6MhhsGnr2fFCcU4BDAEzaWPiq82tzf_iNuWJSa_EQZom=s0-d)
 
 ### Course Project Overview
 
