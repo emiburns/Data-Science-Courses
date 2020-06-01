@@ -812,6 +812,7 @@ if (outputEl) {{
             </script>
         </div>
 
+![png](newplot1.png)
 
 ** Use .ta_plot(study='sma') to create a Simple Moving Averages plot of Morgan Stanley for the year 2015.**
 
@@ -866,6 +867,7 @@ if (outputEl) {{
             </script>
         </div>
 
+![png](newplot2.png)
 
 **Use .ta_plot(study='boll') to create a Bollinger Band Plot for Bank of America for the year 2015.**
 
@@ -920,6 +922,7 @@ if (outputEl) {{
             </script>
         </div>
 
+![png](newplot3.png)
 
 # Great Job!
 
