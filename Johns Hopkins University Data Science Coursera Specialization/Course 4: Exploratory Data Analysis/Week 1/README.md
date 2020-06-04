@@ -43,8 +43,6 @@ site](https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+powe
     energy). It corresponds to an electric water-heater and an
     air-conditioner.
 
-### Review criteria
-
 #### Loading the data
 
 When loading the dataset into R, please consider the following:
