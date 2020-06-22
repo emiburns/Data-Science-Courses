@@ -1,0 +1,18 @@
+#using SQLite Database to create table 'Ages'
+
+#creating empty table Ages
+CREATE TABLE Ages ( 
+  name VARCHAR(128), 
+  age INTEGER
+)
+
+#emptying table and inserting new data
+DELETE FROM Ages;
+INSERT INTO Ages (name, age) VALUES ('Rosalin', 18);
+INSERT INTO Ages (name, age) VALUES ('Nevan', 23);
+INSERT INTO Ages (name, age) VALUES ('Boe', 40);
+INSERT INTO Ages (name, age) VALUES ('Laibah', 36);
+INSERT INTO Ages (name, age) VALUES ('Aaryn', 18);
+
+#pulling data of interest
+SELECT hex(name || age) AS X FROM Ages ORDER BY X
