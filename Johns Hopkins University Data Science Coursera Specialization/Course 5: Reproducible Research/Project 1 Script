@@ -1,0 +1,101 @@
+#intial project setup
+library(tidyverse)
+library(lubridate)
+library(gridExtra)
+
+#unzipping and loading the data
+zip <- unzip('activity.zip')
+df <- read.csv('activity.csv')
+head(df)
+
+#preprocessing data
+df$date <- ymd(df$date)
+
+#grouping data as mean total number of steps/day
+avsteps <- df %>% group_by(date) %>%
+    summarise(total_steps = sum(steps))
+
+#plotting histogram of total number of steps/day
+hist <- ggplot(avsteps, aes(x = total_steps))
+hist + geom_histogram(binwidth = 1500, color="lightgreen", fill="darkgreen") +
+    labs(title = "Number of steps taken per day",
+         y = "Frequency", x = "Total Steps Taken")
+dev.off()
+
+#mean and median total number of steps taken per day
+meansteps = mean(avsteps$total_steps, na.rm = TRUE)
+message('Mean total number of steps taken per day: ', round(meansteps, 2))
+
+mediansteps = median(avsteps$total_steps, na.rm = TRUE)
+message('Median total number of steps taken per day: ', round(mediansteps, 2))
+
+#Time series plot interval and the average number of steps taken, averaged across all days
+series <- aggregate(steps ~ interval, df, mean)
+
+plot1 <- ggplot(series) 
+plot1 + geom_line(aes(x=interval, y=steps), color = "darkgreen") +
+    labs(x = "Time Interval (in minutes)", 
+         y = "Average number of steps taken per day", 
+         title = "Average Daily Steps")
+dev.off()
+
+#5-minute interval that contains the maximum number of steps on average across the days
+series[series$steps == max(series$steps),]
+
+#counting total number of NA's in the dataset
+sum(is.na(df))
+
+#Filling in NA's by adding in median value of steps per 5 minute interval
+newsteps <- df %>% group_by(interval) %>% 
+    summarise(steps = median(steps, na.rm = TRUE, trim = 0.05)) 
+newsteps <- as.data.frame(newsteps)
+
+cleandf <- full_join(df, newsteps, by = "interval") %>% 
+    mutate(steps = ifelse(is.na(steps.x), steps.y, steps.x)) %>% 
+    select(date, interval, steps)
+sum(is.na(cleandf))
+
+#Histogram of the total number of steps taken each day 
+avsteps2 <- cleandf %>% group_by(date) %>%
+    summarise(total_steps = sum(steps))
+
+hist2 <- ggplot(avsteps2, aes(x = total_steps))
+hist2 + geom_histogram(binwidth = 1500, color="darkgreen", fill="lightpink") +
+    labs(title = "Number of steps taken per day (NA values removed)",
+         y = "Frequency", x = "Total Steps Taken")
+dev.off()
+
+#Calculating mean and median total number of steps taken per day 
+meansteps2 = mean(avsteps2$total_steps, na.rm = TRUE)
+message('Mean total number of steps taken per day: ', round(meansteps2, 2))
+
+mediansteps2 = median(avsteps2$total_steps, na.rm = TRUE)
+message('Median total number of steps taken per day: ', round(mediansteps2, 2))
+
+#Comparing mean and median values from df w/ NA's & w/out
+values <- matrix(c(meansteps, mediansteps, mediansteps, mediansteps2), ncol = 2, byrow = T)
+colnames(values) <- c("Mean of Steps Taken", "Median of Steps Taken")
+rownames(values) <- c("Dataset with NA values", "Dataset without NA values")
+values <- as.table(values)
+values
+
+grid.arrange(hist, hist2, ncol=2)
+dev.off()
+
+#Creating factor variable with two levels ("weekday" and "weekend")
+cleandf$days <- weekdays(cleandf$date)
+cleandf$daycategories <- ifelse(cleandf$days %in% c('Saturday', 'Sunday'), 'Weekend', 'Weekday')
+cleandf$daycategories <- factor(cleandf$daycategories)
+
+#Panel plot w/ a time series plot of interval and average number of steps taken 
+#averaged across weekday days and weekend days
+series2 <- cleandf %>% group_by(interval, daycategories) %>%
+    summarise(average_steps = mean(steps))
+
+plot2 <- ggplot(series2) 
+plot2 + geom_line(aes(x=interval, y=average_steps), color = "darkgreen") +
+    facet_grid(daycategories ~ .) +
+    labs(x = "Time Interval (in minutes)", 
+         y = "Average number of steps taken per day", 
+         title = "Average Daily Steps")
+dev.off()
