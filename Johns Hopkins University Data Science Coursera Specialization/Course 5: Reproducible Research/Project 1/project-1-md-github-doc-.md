@@ -151,7 +151,7 @@ plot1 + geom_line(aes(x=interval, y=steps), color = "darkgreen") +
          title = "Average Daily Steps")
 ```
 
-![](plot1)
+![](plot1.png)
 
 We’re also curious about which of the 5-minute intervals contains the
 maximum number of steps on average across all of the days. We’ll use the
