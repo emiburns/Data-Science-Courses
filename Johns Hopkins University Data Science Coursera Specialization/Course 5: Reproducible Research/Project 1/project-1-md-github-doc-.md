@@ -98,7 +98,7 @@ hist <- ggplot(avsteps, aes(x = total_steps))+
 hist
 ```
 
-![](project-1-md-github-doc-_files/figure-gfm/histogram%201-1.png)<!-- -->
+![](hist1.png)
 
 For the final step in this analysis, we want to explicitly print the
 mean and median number of steps taken per day using the data previously
@@ -151,7 +151,7 @@ plot1 + geom_line(aes(x=interval, y=steps), color = "darkgreen") +
          title = "Average Daily Steps")
 ```
 
-![](project-1-md-github-doc-_files/figure-gfm/timeseries%20plot1-1.png)<!-- -->
+![](plot1)
 
 We’re also curious about which of the 5-minute intervals contains the
 maximum number of steps on average across all of the days. We’ll use the
@@ -221,7 +221,7 @@ hist2 <- ggplot(avsteps2, aes(x = total_steps))+
 hist2
 ```
 
-![](project-1-md-github-doc-_files/figure-gfm/hist%202-1.png)<!-- -->
+![](hist2.png)
 
 It doesn’t look like the distribution has changed much but let’s compare
 the plots side-by-side just to be sure.
@@ -230,7 +230,7 @@ the plots side-by-side just to be sure.
 grid.arrange(hist, hist2, ncol=2)
 ```
 
-![](project-1-md-github-doc-_files/figure-gfm/hists-1.png)<!-- -->
+![](hists.png)
 
 Awesome, the histograms look nearly identical. Let’s calculate the mean
 and median steps per day with the cleaned data and compare to our
@@ -305,6 +305,6 @@ plot2 + geom_line(aes(x=interval, y=average_steps), color = "darkgreen") +
          title = "Average Daily Steps")
 ```
 
-![](project-1-md-github-doc-_files/figure-gfm/timeseries%202-1.png)<!-- -->
+![](plot2.png)
 
 And we’ve reached the end of the project\! Well done\!
