@@ -159,3 +159,5 @@ completed data analysis document in to the peer assessment question.
 
 If you choose to submit as a PDF, please insert an obvious placeholder
 URL (e.g. <https://google.com>) in order to allow submission.
+
+PERSONAL RPUB SUBMISSION LINk [HERE](https://rpubs.com/emiburns/632155)
