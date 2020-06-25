@@ -17,6 +17,7 @@ Learning: Data Science
     Data](https://github.com/emiburns/Data-Science-Courses/tree/master/Johns%20Hopkins%20University%20Data%20Science%20Coursera%20Specialization/Course%203:%20Getting%20and%20Cleaning%20Data)
   - [Course 4: Exploratory Data
     Analysis](https://github.com/emiburns/Data-Science-Courses/tree/master/Johns%20Hopkins%20University%20Data%20Science%20Coursera%20Specialization/Course%204:%20Exploratory%20Data%20Analysis)
+  - [Course 5: Reproducible Research](https://github.com/emiburns/Learning-Data-Science/tree/master/Johns%20Hopkins%20University%20Data%20Science%20Coursera%20Specialization/Course%205:%20Reproducible%20Research)
 
 #### [Python for Everybody Coursera Specialization](https://github.com/emiburns/Data-Science-Courses/tree/master/Python%20for%20Everybody%20Coursera%20Specialization)
 
