@@ -70,11 +70,13 @@ approximation of the theoretical center of distribution. We can graph
 our results to get an better visualization…
 
 ``` r
-mean_hist <- ggplot(df, aes(x=data)) + geom_histogram(fill = "lightblue", bins = 30) +                                      geom_vline(aes(xintercept=t_mean), color="purple", linetype="dashed", size=1) +                                geom_vline(aes(xintercept = s_mean), color = "yellow", linetype="dashed", size = 1)
+mean_hist <- ggplot(df, aes(x=data)) + geom_histogram(fill = "lightblue", bins = 30) + 
+geom_vline(aes(xintercept=t_mean), color="purple", linetype="dashed", size=1) + 
+geom_vline(aes(xintercept = s_mean), color = "yellow", linetype="dashed", size = 1)
 mean_hist
 ```
 
-![](Github-Project-Part-1_files/figure-gfm/mean%20graphs-1.png)<!-- -->
+![](means.jpg)
 
 ``` r
 ggsave("means.jpg", height = 5, width = 5)
@@ -142,14 +144,17 @@ The sample CI is pretty close to the normally distributed theoretical
 CI\! Now let’s actually visualize the sample distribution.
 
 ``` r
-hist <- ggplot(df, aes(x=data)) + geom_histogram(aes(y = ..density..), fill = "lightblue", bins = 30) +             geom_vline(aes(xintercept=t_mean), color="purple", linetype="dashed", size=1) +                                geom_vline(aes(xintercept = s_mean), color = "yellow", linetype="dashed", size = 1) + 
-      stat_function(fun = "dnorm", args = list(mean = t_mean, sd = t_sd)) + 
-      stat_function(fun = "dnorm", args = list(mean = s_mean, sd = s_sd)) + 
-      xlab("Means") + ylab("Frequencies")
+hist <- ggplot(df, aes(x=data)) + geom_histogram(aes(y = ..density..), fill = "lightblue", bins = 30) +
+geom_vline(aes(xintercept=t_mean), color="purple", linetype="dashed", size=1) +
+geom_vline(aes(xintercept = s_mean), color = "yellow", linetype="dashed", size = 1) + 
+stat_function(fun = "dnorm", args = list(mean = t_mean, sd = t_sd)) + 
+stat_function(fun = "dnorm", args = list(mean = s_mean, sd = s_sd)) + 
+xlab("Means") + ylab("Frequencies")
+
 hist
 ```
 
-![](Github-Project-Part-1_files/figure-gfm/histogram-1.png)<!-- -->
+![](disthist.jpg)
 
 ``` r
 ggsave("disthist.jpg", height = 15, width = 15)
@@ -166,7 +171,7 @@ qqnorm(data, col = "lightblue")
 qqline(data, col = "yellow", lwd =2)
 ```
 
-![](Github-Project-Part-1_files/figure-gfm/qqplot-1.png)<!-- -->
+![](qqplot.jpg)
 
 It’s nearly linear\! All of this shows that, due to the Central Limit
 Theorem, the simulated sample distribution is a very close approximation
