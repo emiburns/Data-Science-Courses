@@ -171,7 +171,7 @@ qqnorm(data, col = "lightblue")
 qqline(data, col = "yellow", lwd =2)
 ```
 
-![](qqplot.jpg)
+![](qqplot.png)
 
 It’s nearly linear\! All of this shows that, due to the Central Limit
 Theorem, the simulated sample distribution is a very close approximation
