@@ -84,7 +84,7 @@ p2 <- ggplot(ToothGrowth, aes(x=supp, y=len, color=dose)) + geom_boxplot() +
 ggarrange(p1, p2, ncol = 2, nrow = 1)
 ```
 
-![](C6Project_Part2_files/figure-gfm/boxplots-1.png)<!-- -->
+![](part2.png)
 
 According to the graph, there is a positive relationship between dosage
 and tooth length such that, as the dosage increases to 2mg, tooth length
