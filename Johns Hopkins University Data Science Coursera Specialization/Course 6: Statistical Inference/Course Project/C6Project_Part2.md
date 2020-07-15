@@ -93,11 +93,13 @@ length over supplement “VC” for dosages .5mg and 1mg, but not 2mg.
 
 #### **Step 2:** Use confidence intervals and/or hypothesis tests to compare tooth growth by supp and dose
 
-Based off of our exploratory analyses, our hypotheses are as follows: \*
-Null hypothesis 1: Dosage has no significant effect on tooth length
+Based off of our exploratory analyses, our hypotheses are as follows:
+
+**Null hypothesis 1:** Dosage has no significant effect on tooth length
 (alternative hypothesis: dosage has a significant positive effect on
 tooth length)  
-\* Null hypothesis 2: Type of supplement has no sig effect on tooth
+
+**Null hypothesis 2:** Type of supplement has no sig effect on tooth
 length (alt hypothesis: Type of supplement significantly affects tooth
 length)
 
