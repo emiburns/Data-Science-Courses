@@ -27,7 +27,7 @@ Learning: Data Science
     Structures](https://github.com/emiburns/Data-Science-Courses/tree/master/Python%20for%20Everybody%20Coursera%20Specialization/Course%202:%20Python%20Data%20Structures)
   - [Course 3: Using Python to Access Web
     Data](https://github.com/emiburns/Data-Science-Courses/tree/master/Python%20for%20Everybody%20Coursera%20Specialization/Course%203:%20Using%20Python%20to%20Access%20Web%20Data)
-    - [Course 4: Using Databases with Python](https://github.com/emiburns/Learning-Data-Science/tree/master/Python%20for%20Everybody%20Coursera%20Specialization/Course%204:%20Using%20Databases%20with%20Python)
+ - [Course 4: Using Databases with Python](https://github.com/emiburns/Learning-Data-Science/tree/master/Python%20for%20Everybody%20Coursera%20Specialization/Course%204:%20Using%20Databases%20with%20Python)
 
 #### [Udemy Python for Data Science and Machine Learning Bootcamp](https://github.com/emiburns/Data-Science-Courses/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp)
 
@@ -35,11 +35,11 @@ Learning: Data Science
     Project 1](https://github.com/emiburns/Data-Science-Courses/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Data%20Capstone%20Project%201)
   - [Data Capstone
     Project 2](https://github.com/emiburns/Data-Science-Courses/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Data%20Capstone%20Project%202)
-    - [Logistic Regression Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Logistic%20Regression%20Project)
-    - [K Nearest Neighbors Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/KNN%20Project)
-    - [Decision Trees & Random Forests Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Decision%20Trees%20%26%20Random%20Forests%20Project)
-    - [Support Vector Machines Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/SVM%20Project)
-    - [K Means Clustering Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/K%20Means%20Project)
+  - [Logistic Regression Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Logistic%20Regression%20Project)
+  - [K Nearest Neighbors Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/KNN%20Project)
+  - [Decision Trees & Random Forests Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Decision%20Trees%20%26%20Random%20Forests%20Project)
+  - [Support Vector Machines Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/SVM%20Project)
+  - [K Means Clustering Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/K%20Means%20Project)
 
 ### Additional Learning Resources
 
