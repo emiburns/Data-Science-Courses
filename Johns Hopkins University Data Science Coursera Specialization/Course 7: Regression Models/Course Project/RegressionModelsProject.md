@@ -182,7 +182,7 @@ slower than those with automatic transmission.
 ggcorr(mtcars, nbreaks = 5, palette="Dark2", label = T)
 ```
 
-![](RegressionModelsProject_files/figure-gfm/figure%201-1.png)<!-- -->
+![](fig1.png)
 
 *Figure 2: Boxplot of transmission type vs mpg*
 
@@ -192,7 +192,7 @@ f2 <- ggplot(mtcars, aes(x = am, y = mpg, color = am)) +
 f2
 ```
 
-![](RegressionModelsProject_files/figure-gfm/figure%202-1.png)<!-- -->
+![](fig2.png)
 
 *Figure 3: MPG outcome variable vs all predictor variables model*
 
@@ -236,7 +236,7 @@ f4 <- ggplot(mtcars, aes(x=wt, y=mpg, group=am, color= factor(am))) + geom_point
 f4
 ```
 
-![](RegressionModelsProject_files/figure-gfm/fig4-1.png)<!-- -->
+![](fig4.png)
 
 *Figure 5: Regression Model Residual Plots*
 
@@ -245,4 +245,4 @@ par(mfrow=c(2,2))
 plot(mod4, pch=23, bg='orange', cex=.5)
 ```
 
-![](RegressionModelsProject_files/figure-gfm/fig5-1.png)<!-- -->
+![](fig5.png)
