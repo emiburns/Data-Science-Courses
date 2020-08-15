@@ -166,7 +166,7 @@ mod1.lasso <- train(CompressiveStrength~., method="lasso", data=training)
 plot(mod1.lasso$finalModel, xvar="penalty") #cement is last coefficient to be set to zero
 ```
 
-![](Quiz_4_files/figure-gfm/q3-1.png)<!-- -->
+![](q3-1.png)
 
 ## Question 4
 
@@ -198,7 +198,7 @@ mod.test <- bats(tstest)
 plot(mod.train)
 ```
 
-![](Quiz_4_files/figure-gfm/q4-1.png)<!-- -->
+![](q4-1.png)
 
 ``` r
 #ets1<- ets(mod.train)
