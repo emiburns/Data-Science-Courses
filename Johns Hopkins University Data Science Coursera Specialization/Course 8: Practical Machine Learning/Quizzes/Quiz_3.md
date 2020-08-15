@@ -344,3 +344,6 @@ varImpPlot(mod.rf)
 ``` r
 #The order of the variable is: x.2, x.1, x.6, x.8, x.4, x.9, x.3, x.7, x.10
 ```
+![](q5-1.png)
+
+![](3-1.png)
