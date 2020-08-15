@@ -72,7 +72,7 @@ library(Hmisc)
 cutAge<-cut2(training$Age, g=2)
 plot(training$CompressiveStrength,col=cutAge)
 ```
-![](q2 answer-1.png)  
+![](q21.png)  
 ``` r
 cutFly<-cut2(training$FlyAsh, g=2)
 plot(training$CompressiveStrength,col=cutFly)
@@ -82,7 +82,7 @@ plot(training$CompressiveStrength,col=cutFly)
 #There is a non-random pattern in the plot of the outcome versus index that doesn't appear to be perfectly explained by any predictor suggesting a variable may be missing
 ```
 
-![]('q2 answer-2.png')
+![](q22.png)
 
 ## Question 3
 
@@ -104,7 +104,7 @@ symmetric. Why would that be a poor choice for this variable?
 hist(training$Superplasticizer)
 ```
 
-![]('a3 answer-1.png')
+![](a31.png)
 
 ``` r
 log10(training$Superplasticizer)
