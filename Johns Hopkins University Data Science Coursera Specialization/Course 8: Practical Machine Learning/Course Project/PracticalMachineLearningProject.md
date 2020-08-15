@@ -14,6 +14,14 @@ which they did the exercise.
 First we’ll load some packages we’ll need to execute the following
 cleaning, modeling and analysis.
 
+```r
+library(readr)
+library(dplyr)
+library(caret)
+library(randomForest)
+library(party)
+```
+
 We’ll also download the training and test data sets as indicated by the
 original project instructions.
 
@@ -400,7 +408,7 @@ trellis.par.set(caretTheme())
 dotplot(resamp)
 ```
 
-[](threemodelplot.png)
+![](threemodelplot.png)
 
 ### 3\. Random Forest Visualization
 
