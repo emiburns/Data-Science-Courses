@@ -183,13 +183,14 @@ classification of the “classe” outcome variable below.
 
 **Note:** I also fit the training data on two other tree-based models
 (bagging and boosting methods) prior to final model selection. Random
-forest significantly surpassed both boosting and bagging in overall
+forest surpassed both boosting and bagging in overall
 accuracy (see table & plot of respective plot performance in the
 Appendix) and was thus selected as the final model. As this project is a
 short report, the bagging (training method “treebag”) and boosting
 (training method “bstTree”) modeling code is not included.
 
-\#\#Data Modeling Before fitting the data for the random forest model,
+## Data Modeling 
+Before fitting the data for the random forest model,
 we’ll set the seed for reproducibility and split the now clean training
 data into a pure training set (80%) and a validation set (20%).
 
@@ -308,9 +309,9 @@ confusionMatrix(as.factor(testData$classe), pred_rf)
     ## Balanced Accuracy      0.9983   0.9953   0.9927   0.9986   0.9979
 
 So, following the confusion matrix output, the overall accuracy of the
-random forest model is pretty high (99.54%). To estimate the
+random forest model is pretty high (99.46%). To estimate the
 out-of-sample error we simply subtract the overall accuracy of the model
-from 1 (.06%). We’ll go ahead and use the model for our test data
+from 1 (.54%). We’ll go ahead and use the model for our test data
 classification but, if we wanted to, we could also further adjust our
 parameters and/or prune our tree to make it an even closer fit before
 moving on.
@@ -327,6 +328,8 @@ test_pred
 
     ##  [1] B A B A A E D B A A B C B A E E A B B B
     ## Levels: A B C D E
+
+Great! When we check these classifications against the answers provided in the Course Project Quiz, we see that each was correctly identified, thus closing out the task.
 
 ## Appendix
 
@@ -378,7 +381,7 @@ Boosting
 
 <td style="text-align:center;">
 
-99.54
+99.46
 
 </td>
 
@@ -417,7 +420,7 @@ dotplot(resamp)
 plot(fit_rf)
 ```
 
-![](Course8Project_files/figure-gfm/rf%20plots-1.png)<!-- -->
+![](projplot2.png)
 
 ``` r
 #plotting rf
@@ -425,4 +428,4 @@ tree <- randomForest(as.factor(classe) ~., data=trainingClean, method = "class")
 plot(tree, main = "Random Forest Model")
 ```
 
-![](Course8Project_files/figure-gfm/rf%20plots-2.png)<!-- -->
+![](projplot3.png)
