@@ -1,0 +1,34 @@
+---
+title: "Developing Data Products Week 3 Assignment"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Assignment Overview
+
+#### **August 19, 2020**  
+
+
+Create a web page presentation using R Markdown that features a plot created with Plotly. Host your webpage on either GitHub Pages, RPubs, or NeoCities. Your webpage must contain the date that you created the document, and it must contain a plot created with Plotly.
+
+I'll be using a data set from [Our World in Data](https://ourworldindata.org/happiness-and-life-satisfaction) looking at reported rates of happiness across the world. According to their website as of 08/19/2020, the "World Happiness Report is the Gallup World Poll—a set of nationally representative surveys undertaken in more than 160 countries in over 140 languages." Scores for each country cover years 2005 through 2018, are an average of all scores obtained across the population and are reported on a scale from 0 (worst life possible) to 10 (best life possible) via the Cantril Ladder. 
+
+## Plotting Rates of Happiness From 2005 to 2018: Code
+
+```{r code, echo = TRUE, warning=FALSE, message=FALSE}
+library(plotly)
+
+data <- read.csv("happiness.csv")
+
+fig <- plot_ly(data, x = ~Year, y = ~Happiness,
+  color = ~Code, size = ~Happiness)
+```
+
+## Plotting Rates of Happiness From 2005 to 2018: Plot
+
+```{r plot, echo = FALSE, warning=FALSE, message=FALSE}
+fig
+```
