@@ -6,6 +6,7 @@ Developing Data Products Course Project
 ## Links to Project
 
 Shiny App: <https://eburns.shinyapps.io/global-happiness-app/>
+
 RPubs Presentation: <https://rpubs.com/emiburns/651918>
 
 ## Instructions
