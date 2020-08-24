@@ -3,6 +3,11 @@ Developing Data Products Course Project
 
 ##### Johns Hopkins Coursera Specialization: Course 9: Week 4: Course Project
 
+## Links to Project
+
+Shiny App: <https://eburns.shinyapps.io/global-happiness-app/>
+RPubs Presentation: <https://rpubs.com/emiburns/651918>
+
 ## Instructions
 
 This peer assessed assignment has two parts. First, you will create a
