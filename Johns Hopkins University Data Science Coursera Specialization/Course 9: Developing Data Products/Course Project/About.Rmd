@@ -1,0 +1,18 @@
+---
+title: "About the application"
+
+output: html_document
+---
+
+## About the application
+
+##### Developer: Emily Burns
+##### Date of launch: August 23, 2020
+
+---
+  
+Welcome to the Global Happiness Trends App! Here you can look at the variation of self-reported happiness across the world from 2005 to 2017 in the "World Happiness" tab or plot individual countries' change in happiness according to a predictor of choice (education, internet-use, birth rate or gender ratio) in the "Trend Plots" tab.
+
+In each tab, self-reported happiness is reported as an aggregated mean score per country as measured by the World Happiness Report's Gallup World Poll. The Gallup World Poll is a set of nationally representative survey's taken by more than 160 countries in over 140 languages. Happiness is evaluated through the Cantrill ladder, which is asked as: "Please imagine a ladder, with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder would you say you personally feel you stand at this time?" The respondent completes the question by indicating a score from 0 (least life happiness) to 10 (highest life happiness). 
+
+This app was developed with the help of Shiny as per directions of the *Developing Data Products Course Project* in the ninth course of Coursera's Data Science Specialization (find full instruction details [here](https://github.com/emiburns/Learning-Data-Science/tree/master/Johns%20Hopkins%20University%20Data%20Science%20Coursera%20Specialization/Course%209:%20Developing%20Data%20Products/Course%20Project)). Data for this project was downloaded from [Our World in Data's](https://ourworldindata.org/) [Happiness and Life Satisfaction](https://ourworldindata.org/happiness-and-life-satisfaction), [Internet](https://ourworldindata.org/internet), [Education](https://ourworldindata.org/global-education), [Fertility](https://ourworldindata.org/fertility-rate), and [Gender Ratio](https://ourworldindata.org/gender-ratio) pages on August 22, 2020.    
