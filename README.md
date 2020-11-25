@@ -1,7 +1,7 @@
 Learning: Data Science
 ================
 
-###### Repository for data science related courses and projects
+###### Repository for data science related courses and their projects
 
 ![image header](backdrop.png)
 
@@ -20,6 +20,8 @@ Learning: Data Science
   - [Course 5: Reproducible Research](https://github.com/emiburns/Learning-Data-Science/tree/master/Johns%20Hopkins%20University%20Data%20Science%20Coursera%20Specialization/Course%205:%20Reproducible%20Research)
   - [Course 6: Statistical Inference](https://github.com/emiburns/Learning-Data-Science/tree/master/Johns%20Hopkins%20University%20Data%20Science%20Coursera%20Specialization/Course%206:%20Statistical%20Inference)
   - [Course 7: Regression Models](https://github.com/emiburns/Learning-Data-Science/tree/master/Johns%20Hopkins%20University%20Data%20Science%20Coursera%20Specialization/Course%207:%20Regression%20Models)
+  - [Course 8: Practical Machine Learning](https://github.com/emiburns/Learning-Data-Science/tree/master/Johns%20Hopkins%20University%20Data%20Science%20Coursera%20Specialization/Course%208:%20Practical%20Machine%20Learning)
+  - [Course 9: Developing Data Products](https://github.com/emiburns/Learning-Data-Science/tree/master/Johns%20Hopkins%20University%20Data%20Science%20Coursera%20Specialization/Course%209:%20Developing%20Data%20Products)
 
 #### [Python for Everybody Coursera Specialization](https://github.com/emiburns/Data-Science-Courses/tree/master/Python%20for%20Everybody%20Coursera%20Specialization)
 
@@ -40,6 +42,9 @@ Learning: Data Science
   - [Decision Trees & Random Forests Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Decision%20Trees%20%26%20Random%20Forests%20Project)
   - [Support Vector Machines Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/SVM%20Project)
   - [K Means Clustering Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/K%20Means%20Project)
+  - [NLP Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/NLP%20Project)
+  - [TensorFlow Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Tensorflow%20Project)
+  - [Keras Project](https://github.com/emiburns/Learning-Data-Science/tree/master/Udemy%20Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Keras%20Project)
 
 ### Additional Learning Resources
 
@@ -50,7 +55,7 @@ Learning: Data Science
   - [Github](https://github.com/emiburns) for the *Learning: Data
     Science* repository and more
 
-  - [NotYourTypicalDataScientist](https://emiburns.github.io/NotYourTypicalDataScientist.github.io/)
+  - [Medium](https://emiburns.medium.com/)
     for a closer look at data science topics, projects and learning
     experiences
 
